@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css?family=Lobster|Montserrat&display=swap');
+*{
+    color:white;
+font-family: 'Montserrat', sans-serif;
+font-family: 'Lobster', cursive;
+}
+.content{
+    display: flex;
+    width: 100vw;
+    justify-content: center;
+}
+.about-right{
+    float: right;
+    width: 40%;
+    height: 50vh;
+    border: 2px solid white;
+}
+.about-left{
+    float: left;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    width: 40%;
+    height: 50vh;
+    border: 2px solid white;
+    .about-body{
+        height: 100%;
+        position: absolute;
+        border: solid white 2px;
+        overflow: hidden; 
+        border-radius: 0px 0px 0px 60px;
+        img{
+            height: 100%;
+            
+        }
+    }
+    .about-me{
+        height: 100%;
+        position: absolute; 
+        border: solid white 2px;
+        img{
+            height: 100%;
+        }
+    }
+    .circle{
+        position: absolute;
+        border: 2px solid white;
+        height: 100%;
+        width: 70%;
+        border-radius: 50%;
+        transform: rotate(60deg);
+        background-color: #870900;
+    }
+}
+
+
+
+.head{
+    animation-name: tossing;
+    animation-duration: 3.5s;
+    transform-origin: 50% 90%;
+    animation-iteration-count: infinite;
+}
+@keyframes tossing {
+    0% {
+        transform: rotate(-4deg);
+    }
+    
+    50% {
+        transform: rotate(4deg);
+    }
+    100% {
+        transform: rotate(-4deg);
+    }
+}
