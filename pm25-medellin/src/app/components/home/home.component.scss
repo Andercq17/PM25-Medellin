@@ -1,60 +1,123 @@
-@import url('https://fonts.googleapis.com/css?family=Lobster|Montserrat&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Gabarito&family=Krona+One&display=swap');
+
 *{
     color:white;
-font-family: 'Montserrat', sans-serif;
-font-family: 'Lobster', cursive;
+    font-family: 'Gabarito', sans-serif;
 }
-.content{
-    display: flex;
-    width: 100vw;
-    justify-content: center;
-}
-.about-right{
-    float: right;
-    width: 40%;
-    height: 50vh;
-    border: 2px solid white;
-}
-.about-left{
-    float: left;
-    display: flex;
-    justify-content: center;
-    position: relative;
-    width: 40%;
-    height: 50vh;
-    border: 2px solid white;
-    .about-body{
-        height: 100%;
-        position: absolute;
-        border: solid white 2px;
-        overflow: hidden; 
-        border-radius: 0px 0px 0px 60px;
-        img{
-            height: 100%;
+.home{
+    display: block;
+    width: 100%;
+    .logo{    
+        background-color: #1F272C;
+        height: 80vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        img:hover{
+            filter: brightness(120%);
+        }
+    }
+    .content{
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        margin-top: 100px;
+        margin-bottom: 40px;
+        
+        .about-right{
+            float: right;
+            width: 40%;
+            height: 35vh;
+            .contenedor-texto{
+                width: 100%;
+                border-radius: 10px;
+                margin: 0 8px 16px;
+                position: relative;
+                color:white;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                transition: all 0.2s ease-in-out;
+                line-height: 24px;
+                h5{
+                    border-radius: 15px;
+                    padding: 30px;
+                    background-color: white;
+                    margin-top: 10px;
+                    color: black;
+                    font-size: 25px;
+                    font-weight: 100;
+
+                    
+                    // &:hover{
+                    //     transform: translateY(-3px);
+                    //     box-shadow: 0 10px 20px white;
+                    //     .title{
+                            
+                    //         transition: all 0.2s ease-in-out;
+                    //         filter: brightness(120%);    
+                    //     }
+                        
+                    // }
+                }
+            }
+            
+            .title{
+                color: white;
+                font-size:30px;
+                height: 70px;
+                width: 50vw;
+                display: flex;
+                align-items: center;
+                font-weight: bolder;
+                font-family: 'Gabarito', sans-serif;
+                font-family: 'Krona One', sans-serif;
+            }
+            
+              
+        }
+        .contenedor-about-left{
+            display: block;
+            width: 40%;
+            height: 50vh;
             
         }
-    }
-    .about-me{
-        height: 100%;
-        position: absolute; 
-        border: solid white 2px;
-        img{
+        .about-left{
+            display: flex;
+            justify-content: center;
+            position: relative;
+            width: 100%;
             height: 100%;
+            
+            .about-body{
+                height: 100%;
+                position: absolute;
+                overflow: hidden; 
+                img{
+                    height: 100%;
+                    
+                }
+            }
+            .about-me{
+                height: 100%;
+                position: absolute; 
+                img{
+                    height: 100%;
+                }
+            }
+            .circle{
+                position: absolute;
+                height: 100%;
+                width: 90%;
+                border-radius: 200px;
+                transform: rotate(0deg);
+                background-image: url("https://estaticos.elcolombiano.com/binrepository/843x562/32c0/780d562/none/11101/MSAM/medellinnn_40903425_20221019165456.jpg");
+                box-shadow: 0 20px 20px black;
+                opacity: 0.7;
+            }
         }
     }
-    .circle{
-        position: absolute;
-        border: 2px solid white;
-        height: 100%;
-        width: 70%;
-        border-radius: 50%;
-        transform: rotate(60deg);
-        background-color: #870900;
-    }
 }
-
-
-
 .head{
     animation-name: tossing;
     animation-duration: 3.5s;
@@ -72,4 +135,33 @@ font-family: 'Lobster', cursive;
     100% {
         transform: rotate(-4deg);
     }
+}
+@media screen and (max-width:1000px) {
+    .home{
+        width: 100%;
+        margin: 0;
+        .logo{
+            height: 55vh;
+            img{
+                width: 40vw;
+            }
+        }
+        .content{
+            .about-right{
+                width: 100%;
+                margin: 0;
+            }
+            .contenedor-about-left{
+                width: 0%;
+                
+                display: none;
+                .about-left,.about-body,.about-me,.circle{
+            
+                    display: none;
+                }
+            }
+        }
+    }
+    
+    
 }

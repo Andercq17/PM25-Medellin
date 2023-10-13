@@ -1,6 +1,11 @@
-html{
-    background-color: black;
+html,body{
+    background-color: rgb(34, 34, 34);
+    
     h5,h3,h2{
         color: white;
     }
+}
+*{
+    padding: 0;
+    margin: 0;
 }

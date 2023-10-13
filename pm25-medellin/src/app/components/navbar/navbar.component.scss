@@ -7,7 +7,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    margin-top: 16px;
+    
   }
 
   .card {
@@ -45,8 +45,22 @@
     box-shadow: 0 4px 17px white;
   }
   .toolbar{
-    border-bottom: white solid 2px;
-    width: 90%;
-    margin-left: 5%;
+    width: 100%;
+    padding-top: 20px;
+    top: 0;
+    position: sticky;
+    z-index: 1;
+    background-color: #1F272C;
 
+  }
+  @media screen and (max-width:1000px) {
+    .toolbar{
+      .card-container{
+        width: 100%;
+        display: flex;
+        .card{
+          width: 30%;
+        }
+      }
+    }
   }
