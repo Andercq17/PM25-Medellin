@@ -2,7 +2,7 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 
-json='Datos_SIATA_Aire_pm25.json'
+json='PM25-Medellin\Datos_SIATA_Aire_pm25.json'
 data=pd.read_json(json,convert_dates=True)
 latitudes=data.latitud.values.tolist()
 longitudes=data.longitud.values.tolist()
@@ -22,9 +22,8 @@ def func(x, y):
  return x*(1-x)*np.cos(4*np.pi*x) * np.sin(4*np.pi*y**2)**2
 
 #creo una malla de 100 x 200
-grid_x, grid_y=np.meshgrid(np.linspace(min(longitudes),max(longitudes),200),np.linspace(min(latitudes),max(latitudes),200))
-#me invento un grupo de puntos aleatorios​
-# ejecuto las interpolaciones, uso tres metodos para comparar su desempeno​
+grid_x, grid_y=np.meshgrid(np.linspace(min(longitudes),max(longitudes),200),np.linspace(min(latitudes),max(latitudes),300))
+
 from scipy.interpolate import griddata
 
 import matplotlib.pyplot as plt
